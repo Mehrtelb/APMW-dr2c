@@ -7,7 +7,7 @@ config file.
 
 ## What does randomization do to this game?
 
-Text
+It randomizes Zombo Points that can be found in AWBL Events
 
 ## What items can appear in other players' worlds?
 
