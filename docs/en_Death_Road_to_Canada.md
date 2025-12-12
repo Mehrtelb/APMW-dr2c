@@ -11,8 +11,9 @@ It randomizes Zombo Points that can be found in AWBL Events
 
 ## What items can appear in other players' worlds?
 
-This is dependent entirely upon your YAML options. Some examples include: charms, grubs, lifeblood cocoons, geo, etc.
+Zombo Points, but further dependent entirely upon your YAML options. Some examples include: 
+Weapon and special character unlocks
 
 ## What does another world's item look like in Death Road to Canada?
 
-Ingame (AP model as Zombo Point replacement?).
+Ingame (AP model as Zombo Point replacement for randomized items?).

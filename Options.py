@@ -1,6 +1,11 @@
 import typing
 from dataclasses import make_dataclass
 
+from Options import Option, DefaultOnToggle, Toggle, Choice, Range, OptionDict, NamedRange, DeathLink, PerGameCommonOptions
+
+class DeathLinkBehaviour(Choice):
+
+
 cost_sanity_weights: typing.Dict[str, type(Option)] = {}
 for term, cost in cost_terms.items():
     option_name = f"CostSanity{cost.option}Weight"
@@ -22,7 +27,7 @@ for term, cost in cost_terms.items():
     cost_sanity_weights[option.__name__] = option
 
 dr2c_options: typing.Dict[str, type(Option)] = {
-# A bunch of unresolved references and stuff I don't know what to with yet
+# A bunch of unresolved references and stuff I don't know what to do with yet
     **dr2c_randomize_options,
     RandomizeElevatorPass.__name__: RandomizeElevatorPass,
     **dr2c_logic_options,

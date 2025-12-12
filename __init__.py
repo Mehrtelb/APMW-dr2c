@@ -2,42 +2,14 @@ from worlds.AutoWorld import World
 
 import typing
 
+from .Items import item_table, item_name_groups
+
 # Unresolved references to files in Archipelago
 from BaseClasses import Region, Location, MultiWorld, Item, LocationProgressType, Tutorial, ItemClassification, \
     CollectionState
 from worlds.AutoWorld import World, LogicMixin, WebWorld
 
-# I am not sure if this even necessary
-awbl_locations = {
-    "Apartment Rescue",
-    "Gym Apartment",
-    "Riled Up Apartment",
-    "Swarmed Apartment",
-    "Dead Arcade",
-    "Swarmed Arcade",
-    "Bank",
-    "Beautiful Beach",
-    "Bookstore",
-    "Cabin Rescue",
-    "Cabin with Car",
-    "Prepper Cabin",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-}
+
 
 madeup_progression = {
     # Allows actually beating a mode by letting you into Canada
@@ -53,7 +25,7 @@ logicless_options = {
 }
 
 class DR2CWeb(WebWorld):
-    rich_text_options:doc = True
+    rich_text_options_doc = True
 
     setup_en = Tutorial(
         "Mod Setup and Use Guide",
@@ -68,17 +40,33 @@ class DR2CWeb(WebWorld):
     theme = "partyTime"
     game_info_languages = ["en"]
 
-    options_presets = {
-        "Default": {
-            "progression_balancing": 50,
-            "starting_special_characters": 0,
-            "starting_class": "random",
-            "weaponsanity": "off",
-            "costsanity": "off",
-        }
-    }
+    options_presets = options_presets
 
     bug_report_page = https://github.com/Mehrtelb/APMW-dr2c/issues/new?assignees=&labels=bug%2C+needs+investigation&template=bug_report.md&title=
+
+class DR2CContainer(APPlayerContainer):
+    game: str = "Death Road to Canada"
+
+    def __init__(
+            self,
+            config_json: str,
+            options_json: str,
+            outfile_name: str,
+            output_directory: str,
+            player: Optional[int] = None,
+            player_name: str = "",
+            server: str = ""):
+        self.config_json = config_json
+        self.config_path = "config.json"
+        self.options_path = "options.json"
+        self.options_json = options_json
+        container_path = os.path.join(output_directory, outfile_name + ".krtdl")
+        super().__init__(container_path, player, player_name, server)
+
+    def write_contents(self, opened_zipfile: zipfile.ZipFile) -> None:
+        opened_zipfile.writestr(self.config_path, self.config_json)
+        opened_zipfile.writestr(self.options_path, self.options_json)
+        super().write_contents(opened_zipfile)
 
 class dr2c(World):
     """Death Road to Canada is a Randomly Generated Road Trip Action-RPG. You have to manage a car full of jerks as they
@@ -98,9 +86,12 @@ class dr2c(World):
     game: str = "Death Road to Canada"
     options_dataclass = DR2COptions
     options: DR2COptions
-    #    settings:
+    topology_present = False
+    settings: typing.ClassVar[DeathRoadtoCanadaSettings]
 
     web = DR2CWeb()
+
+    item_name_to_id = {name: data.id for name, data in item_table.items()}
 
     ranges: typing.Dict[str, typing.Tuple[int, int]]
     zombo_points: int

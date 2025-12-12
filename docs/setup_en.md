@@ -2,10 +2,11 @@
 
 ## Required Software
 * A legal copy of Death Road to Canada.
-    * Steam, Gog, and Xbox Game Pass versions of the game are supported?
-    * Windows, Mac, and Linux (including Steam Deck) are supported?
+    * Steam, Gog, and Humble versions of the game are supported?
+    * Windows, Mac, and Linux (including Steam Deck) should be supported
 
-## Installing the Archipelago Mod using Lumafly
+## Installing the APforDR2C Mod
+### Backing up your save
 
 
 ## Configuring your YAML File
