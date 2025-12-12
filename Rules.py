@@ -27,6 +27,8 @@ class DR2CRules:
         "INFECTION MODE EXTREME": self.has_unlocked_ime
     }
 
+# Maybe add a function that changes unlocks that are not needed to filler?
+
     def has_unlocked_stthm(self, state: CollectionState) -> bool:
         return state.has("Unlock Short Trip to Heck Mode", self.player)
 
