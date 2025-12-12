@@ -3,7 +3,7 @@ from typing import Dict, List
 dr2c_regions_all: Dict[str, List[str]] = {
     "Menu": ["Death Road Normal Mode", "Familiar Characters Mode", "Rare Characters Mode", "Short Trip to Heck Mode",
             "Long Winding Road Mode", "Four Jerks Mode", "Deadlier Road Mode", "Familiar EXTREME", "Rare EXTREME",
-            "Marathon Mode", "KEPA MODE", "Four Jerks EXTREME", "ENDLESS MODE", "OPP MODE", "Quick Death MODE",
+            "Marathon Mode", "KEPA MODE", "Four Jerks EXTREME", "OPP MODE", "Quick Death MODE",
             "INFECTION MODE", "SEVERE WEATHER MODE", "RPG MODE", "Four Jerks SCEPTER", "MUTATION MODE",
             "INFECTION MODE EXTREME"],
     "Death Road Normal Mode", : [],
@@ -18,7 +18,6 @@ dr2c_regions_all: Dict[str, List[str]] = {
     "Marathon Mode": [],
     "KEPA MODE": [],
     "Four Jerks EXTREME": [],
-    "ENDLESS MODE": [],
     "OPP MODE": [],
     "Quick Death MODE": [],
     "INFECTION MODE": [],

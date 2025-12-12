@@ -1,16 +1,71 @@
 from BaseClasses import ItemClassification
 from typing import TypedDict, Dict, Set
 
-item_table = {}
+from BaseClasses import Item
 
-class DR2CItemData(NamedTuple):
-    advancement: bool
-    id: int
-    type: str
+class DR2CItem(Item):
+    name: str = "Death Road to Canada"
 
 
+class ItemDict(TypedDict):
+    name: str
+    count: int
+    classification: ItemClassification
 
-item_name_groups: Dict[str, Set[str]] = {
-    'Progression': {'Passport', 'Unlock Short Trip to Heck Mode', 'Unlock Long Winding Road Mode', 'Unlock Deadlier Road Mode', 'Unlock Familiar EXTREME', 'Unlock Rare EXTREME', 'Unlock Marathon Mode', 'Unlock KEPA MODE', 'Unlock Four Jerks EXTREME', 'Unlock ENDLESS MODE', 'Unlock OPP MODE', 'Unlock Quick Death MODE', 'Unlock INFECTION MODE', 'Unlock SEVERE WEATHER MODE', 'Unlock RPG MODE', 'Unlock Four Jerks SCEPTER', 'Unlock MUTATION MODE', 'Unlock INFECTION MODE EXTREME' },
-    'Misc': {'Zombo Point', 'LevelUp', }
-}
+
+dr2c_items: List[ItemDict] = [
+    {'name': "Passport",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock Short Trip to Heck Mode",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock Long Winding Road Mode",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock Deadlier Road Mode",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock Familiar EXTREME",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock Rare EXTREME",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock Marathon Mode",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock KEPA MODE",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock Four Jerks EXTREME",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock OPP MODE",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock Quick Death MODE",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock INFECTION MODE",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock SEVERE WEATHER MODE",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock RPG MODE",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock Four Jerks SCEPTER",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock MUTATION MODE",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "Unlock INFECTION MODE EXTREME",
+     'count': 1,
+     'classification': ItemClassification.progression},
+    {'name': "10 Zombo Points",
+     'count': 100,
+     'classification': ItemClassification.useful},
+]

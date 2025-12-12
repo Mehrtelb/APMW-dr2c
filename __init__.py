@@ -14,18 +14,10 @@ from worlds.AutoWorld import World, LogicMixin, WebWorld
 
 
 
-madeup_progression = {
 # Allows actually beating a mode by letting you into Canada
-    "Passport",
-    "ModeUnlock1", "ModeUnlock2", "ModeUnlock3"
-}
-# Not sure how this is gonna work, just placing it here for now
-#
-# Vanilla placements of the following items have no impact on logic, thus we can avoid creating these items and
-# locations entirely when the option to randomize them is disabled.
-logicless_options = {
-    "WeaponSanity", "CostSanity"
-}
+madeup_progression = {"Passport"}
+
+
 
 class DR2CWeb(WebWorld):
     rich_text_options_doc = True
@@ -69,9 +61,6 @@ class dr2c(World):
     settings: typing.ClassVar[DeathRoadtoCanadaSettings]
 
     web = DR2CWeb()
-
-    item_name_to_id = {name: data.id for name, data in item_table.items()}
-    item_name_groups = Items.item_name_groups
 
     ranges: typing.Dict[str, typing.Tuple[int, int]]
     zombo_points: int
