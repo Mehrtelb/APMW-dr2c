@@ -2,6 +2,7 @@ from worlds.AutoWorld import World
 
 import typing
 
+from Options import DR2COptions
 from .Items import item_table, item_name_groups
 
 # Unresolved references to files in Archipelago
@@ -12,7 +13,7 @@ from worlds.AutoWorld import World, LogicMixin, WebWorld
 
 
 madeup_progression = {
-    # Allows actually beating a mode by letting you into Canada
+# Allows actually beating a mode by letting you into Canada
     "Passport",
     "ModeUnlock1", "ModeUnlock2", "ModeUnlock3"
 }
@@ -44,30 +45,6 @@ class DR2CWeb(WebWorld):
 
     bug_report_page = https://github.com/Mehrtelb/APMW-dr2c/issues/new?assignees=&labels=bug%2C+needs+investigation&template=bug_report.md&title=
 
-class DR2CContainer(APPlayerContainer):
-    game: str = "Death Road to Canada"
-
-    def __init__(
-            self,
-            config_json: str,
-            options_json: str,
-            outfile_name: str,
-            output_directory: str,
-            player: Optional[int] = None,
-            player_name: str = "",
-            server: str = ""):
-        self.config_json = config_json
-        self.config_path = "config.json"
-        self.options_path = "options.json"
-        self.options_json = options_json
-        container_path = os.path.join(output_directory, outfile_name + ".krtdl")
-        super().__init__(container_path, player, player_name, server)
-
-    def write_contents(self, opened_zipfile: zipfile.ZipFile) -> None:
-        opened_zipfile.writestr(self.config_path, self.config_json)
-        opened_zipfile.writestr(self.options_path, self.options_json)
-        super().write_contents(opened_zipfile)
-
 class dr2c(World):
     """Death Road to Canada is a Randomly Generated Road Trip Action-RPG. You have to manage a car full of jerks as they
     explore cities, find weird people, and face up to 500 zombies at once.
@@ -85,7 +62,7 @@ class dr2c(World):
     """  # from http://www.deathroadtocanada.com/
     game: str = "Death Road to Canada"
     options_dataclass = DR2COptions
-    options: DR2COptions
+    options = DR2COptions
     topology_present = False
     settings: typing.ClassVar[DeathRoadtoCanadaSettings]
 
@@ -181,12 +158,6 @@ class dr2c(World):
         }
         res["checksum"] = data_package_checksum(res)
         return res
-
-
-# any methods attached to this can be used as part of CollectionState,
-# please use a prefix as all of them get clobbered together
-class LogicMixin(metaclass=AutoLogicRegister):
-    pass
 
 
 def data_package_checksum(data: "GamesPackage") -> str:
