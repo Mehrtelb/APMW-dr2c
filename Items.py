@@ -66,6 +66,9 @@ dr2c_items: List[ItemDict] = [
      'count': 1,
      'classification': ItemClassification.progression},
     {'name': "10 Zombo Points",
-     'count': 100,
+     'count': 1,
+     'classification': ItemClassification.useful},
+    {'name': "Level Up",
+     'count': 1,
      'classification': ItemClassification.useful},
 ]
