@@ -15,4 +15,8 @@ which made testing and looking at how the game works a lot easier!
 
 Thanks to guiLe for making this [Steam Community Guide](https://steamcommunity.com/sharedfiles/filedetails/?id=749219319)
 for editing save games!
+
+And thanks to knavesmith for his 
+[youtube modding tutorial](https://www.youtube.com/watch?v=qvtlqP96Z5s&list=PL0QaXDyXTWpDeYcFcoHBn2YKTPbht1F92)
+for how to mod DR2C!
 ## Other Stuff
