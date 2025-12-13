@@ -6,7 +6,7 @@ dr2c_regions_all: Dict[str, List[str]] = {
             "Marathon Mode", "KEPA MODE", "Four Jerks EXTREME", "OPP MODE", "Quick Death MODE",
             "INFECTION MODE", "SEVERE WEATHER MODE", "RPG MODE", "Four Jerks SCEPTER", "MUTATION MODE",
             "INFECTION MODE EXTREME"],
-    "Unlocks" : []
+    "Unlocks" : [],
     "Death Road Normal Mode" : [],
     "Familiar Characters Mode": [],
     "Rare Characters Mode": [],
@@ -26,5 +26,5 @@ dr2c_regions_all: Dict[str, List[str]] = {
     "RPG MODE": [],
     "Four Jerks SCEPTER": [],
     "MUTATION MODE": [],
-    "INFECTION MODE EXTREME": [],
+    "INFECTION MODE EXTREME": []
 }
