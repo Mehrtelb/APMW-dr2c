@@ -1,12 +1,12 @@
 from typing import Dict, List
 
 dr2c_regions_all: Dict[str, List[str]] = {
-    "Menu": ["Unlocks", "Death Road Normal Mode", "Familiar Characters Mode", "Rare Characters Mode", "Short Trip to Heck Mode",
+    "Menu": ["Zombo Town", "Death Road Normal Mode", "Familiar Characters Mode", "Rare Characters Mode", "Short Trip to Heck Mode",
             "Long Winding Road Mode", "Four Jerks Mode", "Deadlier Road Mode", "Familiar EXTREME", "Rare EXTREME",
             "Marathon Mode", "KEPA MODE", "Four Jerks EXTREME", "OPP MODE", "Quick Death MODE",
             "INFECTION MODE", "SEVERE WEATHER MODE", "RPG MODE", "Four Jerks SCEPTER", "MUTATION MODE",
             "INFECTION MODE EXTREME"],
-    "Unlocks" : [],
+    "Zombo Town" : [],
     "Death Road Normal Mode" : [],
     "Familiar Characters Mode": [],
     "Rare Characters Mode": [],

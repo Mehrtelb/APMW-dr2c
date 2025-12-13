@@ -64,7 +64,7 @@ class GoalSpecificModes(BaseOptions.OptionSet):
 class ZomboPointsMultiplier(Range):
     """
     Multiplies the amount of Zombo Points you gain from Pickups and Events.
-    Choosing 0 disables Zombo Points, why would you do that though?
+    Choosing 0 disables Zombo Points, but why would you do that? Do you want to impress someone?
     """
     display_name = "Zombo Points Multiplier"
     range_start = 0

@@ -5,7 +5,7 @@ from BaseClasses import Location
 class DR2CLocation(Location):
     game: str = "Death Road to Canada"
 
-uncks_locations = [
+zt_locations = [
     "Perk 1_1",
     "Perk 1_2",
     "Perk 1_3",

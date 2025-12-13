@@ -19,4 +19,7 @@ for editing save games!
 And thanks to knavesmith for his 
 [youtube modding tutorial](https://www.youtube.com/watch?v=qvtlqP96Z5s&list=PL0QaXDyXTWpDeYcFcoHBn2YKTPbht1F92)
 for how to mod DR2C!
-## Other Stuff
+
+## TODO
+- [x] A lot
+

@@ -56,6 +56,3 @@ class dr2c(World):
     settings: typing.ClassVar[DeathRoadtoCanadaSettings]
 
     web = DR2CWeb()
-
-    zombo_points: int
-    zombo_points_count: int
